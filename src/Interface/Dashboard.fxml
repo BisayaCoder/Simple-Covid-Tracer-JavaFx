@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../styles/style_sheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface.DashboardController">
+   <top>
+      <MenuBar fx:id="men_bar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="scan_id" mnemonicParsing="false" onAction="#init_scanner" text="Scan ID's" />
+                  <MenuItem mnemonicParsing="false" text="Logout" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#trav_hist" text="Travel History" />
+                  <MenuItem mnemonicParsing="false" text="Residence Health Status" />
+                  <MenuItem mnemonicParsing="false" text="Statuses" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Register Residence" />
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="dashboard" BorderPane.alignment="CENTER">
+         <children>
+            <PasswordField fx:id="admin_pass" layoutX="433.0" layoutY="333.0" onAction="#bira" onKeyReleased="#when_typed" prefHeight="57.0" prefWidth="251.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="trigger" layoutX="456.0" layoutY="389.0" prefHeight="27.0" prefWidth="214.0" text="Hit 'ENTER' key to Login">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="l1" fill="#db0202" layoutX="453.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Administrator Password-">
+               <font>
+                  <Font name="Euphemia" size="18.0" />
+               </font>
+            </Text>
+            <Label fx:id="promt_text" layoutX="486.0" layoutY="416.0" prefHeight="24.0" prefWidth="145.0" text="Please fill all the fields" textFill="RED">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="go" layoutX="524.0" layoutY="428.0" mnemonicParsing="false" onAction="#fire" text="Button" />
+            <Text fill="WHITE" layoutX="34.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STATION 1:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Label layoutX="34.0" layoutY="188.0" text="Brgy. Lower Felis" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lx1" layoutX="440.0" layoutY="302.0" prefHeight="70.0" prefWidth="275.0" text="April 5, 2020" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label fx:id="lx2" layoutX="463.0" layoutY="351.0" prefHeight="70.0" prefWidth="227.0" text="Sunday" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label fx:id="lx3" layoutX="431.0" layoutY="398.0" prefHeight="70.0" prefWidth="277.0" text="2:13:10 PM" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

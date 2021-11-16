@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface._CheckerController">
+   <children>
+      <Label layoutX="38.0" layoutY="82.0" text="FULLNAME:" />
+      <Label layoutX="38.0" layoutY="119.0" text="AGE:" />
+      <Label layoutX="39.0" layoutY="150.0" text="GENDER:" />
+      <Label layoutX="37.0" layoutY="184.0" text="ADDRESS:" />
+      <Label layoutX="38.0" layoutY="252.0" text="MUNICIPALITY:" />
+      <Label layoutX="38.0" layoutY="217.0" text="PROVINCE:" />
+      <TextField fx:id="fname" layoutX="123.0" layoutY="79.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="fage" layoutX="123.0" layoutY="115.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="fst" layoutX="123.0" layoutY="178.0" prefHeight="25.0" prefWidth="96.0" promptText="Street" />
+      <Separator layoutX="30.0" layoutY="64.0" orientation="VERTICAL" prefHeight="306.0" prefWidth="6.0" />
+      <CheckBox fx:id="jmale" layoutX="123.0" layoutY="150.0" mnemonicParsing="false" onAction="#ifclicked" text="Male" />
+      <CheckBox fx:id="jfmale" layoutX="181.0" layoutY="150.0" mnemonicParsing="false" onAction="#iffclicked" text="Female" />
+      <TextField fx:id="fbrgy" layoutX="229.0" layoutY="178.0" prefHeight="25.0" prefWidth="96.0" promptText="Brgy." />
+      <Button fx:id="data_submit" layoutX="125.0" layoutY="397.0" mnemonicParsing="false" onAction="#submit" prefHeight="34.0" prefWidth="92.0" text="SUBMIT DATA" />
+      <Label layoutX="37.0" layoutY="322.0" text="HEALTH STATUS:" />
+      <ComboBox fx:id="fstat" layoutX="149.0" layoutY="318.0" onAction="#select_hs" prefHeight="25.0" prefWidth="174.0" promptText="select status" />
+      <Label layoutX="38.0" layoutY="287.0" text="DATE REGISTERED:" />
+      <DatePicker fx:id="fdate" layoutX="149.0" layoutY="283.0" />
+      <ComboBox fx:id="fprov" layoutX="124.0" layoutY="213.0" onAction="#sel_prov" prefHeight="25.0" prefWidth="201.0" promptText="select province" />
+      <ComboBox fx:id="fmunc" layoutX="124.0" layoutY="248.0" prefHeight="25.0" prefWidth="201.0" promptText="select municipality" />
+      <ImageView fx:id="qr_code_view" fitHeight="292.0" fitWidth="280.0" layoutX="357.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="gen_code" layoutX="350.0" layoutY="355.0" mnemonicParsing="false" onAction="#generate_code" prefHeight="34.0" prefWidth="152.0" text="Generate Code" />
+      <Label layoutX="18.0" layoutY="40.0" text="PERSONAL INFORMATION">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator fx:id="l3" layoutX="135.0" layoutY="369.0" prefHeight="3.0" prefWidth="33.0" />
+      <ComboBox fx:id="non_stbl_list" layoutX="166.0" layoutY="355.0" prefHeight="25.0" prefWidth="158.0" />
+      <Separator layoutX="240.0" layoutY="52.0" prefHeight="1.0" prefWidth="96.0" />
+      <Separator fx:id="l2" layoutX="135.0" layoutY="328.0" orientation="VERTICAL" prefHeight="43.0" prefWidth="6.0" />
+      <Separator layoutX="333.0" layoutY="52.0" orientation="VERTICAL" prefHeight="335.0" prefWidth="6.0" />
+      <Separator fx:id="l1" layoutX="136.0" layoutY="328.0" prefHeight="3.0" prefWidth="6.0" />
+   </children>
+</AnchorPane>

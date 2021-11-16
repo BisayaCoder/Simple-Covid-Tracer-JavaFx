@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface._Trav_HistController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableView" layoutX="5.0" layoutY="142.0" prefHeight="369.0" prefWidth="1091.0">
+              <columns>
+                <TableColumn fx:id="_fname" prefWidth="184.0" text="Fullname" />
+                <TableColumn fx:id="_fadd" minWidth="1.0" prefWidth="198.0" text="Address" />
+                  <TableColumn fx:id="f_age" minWidth="0.0" prefWidth="74.0" text="Age" />
+                  <TableColumn fx:id="_fgender" prefWidth="79.0" text="Gender" />
+                  <TableColumn fx:id="_fhs" prefWidth="145.0" text="Health Status" />
+                  <TableColumn fx:id="_ffrom" prefWidth="135.0" text="Travel from" />
+                  <TableColumn fx:id="_fto" prefWidth="135.0" text="Travel to" />
+                  <TableColumn fx:id="_freason" prefWidth="145.0" text="Reason" />
+              </columns>
+            </TableView>
+            <DatePicker fx:id="datePicker" layoutX="25.0" layoutY="25.0" onAction="#toConvert" />
+            <CheckBox layoutX="25.0" layoutY="65.0" mnemonicParsing="false" text="STABLE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <CheckBox layoutX="25.0" layoutY="94.0" mnemonicParsing="false" text="NOT - STABLE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <Text layoutX="886.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STABLE:" />
+            <Text layoutX="886.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOT STABLE:" />
+            <Separator layoutX="15.0" layoutY="16.0" prefWidth="200.0" />
+            <Separator layoutX="15.0" layoutY="129.0" prefWidth="200.0" />
+            <Separator layoutX="212.0" layoutY="16.0" orientation="VERTICAL" prefHeight="114.0" prefWidth="0.0" />
+            <Separator layoutX="12.0" layoutY="16.0" orientation="VERTICAL" prefHeight="114.0" prefWidth="0.0" />
+            <TextField fx:id="search" layoutX="407.0" layoutY="85.0" onKeyReleased="#ngita" prefHeight="32.0" prefWidth="317.0" promptText="you can search here via name, age, address and gender" />
+            <Separator layoutX="221.0" layoutY="15.0" prefHeight="1.0" prefWidth="653.0" />
+            <Separator layoutX="219.0" layoutY="129.0" prefHeight="1.0" prefWidth="653.0" />
+            <Separator layoutX="872.0" layoutY="16.0" orientation="VERTICAL" prefHeight="114.0" prefWidth="0.0" />
+            <Separator layoutX="218.0" layoutY="15.0" orientation="VERTICAL" prefHeight="114.0" prefWidth="0.0" />
+            <Separator layoutX="883.0" layoutY="15.0" prefWidth="200.0" />
+            <Separator layoutX="882.0" layoutY="129.0" prefWidth="200.0" />
+            <Separator layoutX="1080.0" layoutY="15.0" orientation="VERTICAL" prefHeight="114.0" prefWidth="0.0" />
+            <Separator layoutX="880.0" layoutY="15.0" orientation="VERTICAL" prefHeight="114.0" prefWidth="0.0" />
+            <Text layoutX="933.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ubo:" />
+            <Text layoutX="934.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sip-on:" />
+            <Text layoutX="934.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hilanat/Kalintura:" />
+            <Separator layoutX="911.0" layoutY="67.0" orientation="VERTICAL" prefHeight="45.0" prefWidth="4.0" />
+            <Separator layoutX="912.0" layoutY="77.0" prefHeight="0.0" prefWidth="21.0" />
+            <Separator layoutX="913.0" layoutY="94.0" prefHeight="0.0" prefWidth="21.0" />
+            <Separator layoutX="913.0" layoutY="111.0" prefHeight="0.0" prefWidth="21.0" />
+            <Label fx:id="Lstable" layoutX="937.0" layoutY="22.0" prefHeight="20.0" prefWidth="31.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="rec" layoutX="244.0" layoutY="25.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Search by date" />
+                  <MenuItem mnemonicParsing="false" text="Search by health status" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="help_butt" mnemonicParsing="false" onAction="#help" text="More information" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

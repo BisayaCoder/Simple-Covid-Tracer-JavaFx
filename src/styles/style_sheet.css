@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 2, 2020, 11:23:24 AM
+    Author     : Administrator
+*/
+
+.root{
+    -fx-background-image: url('../Backgrounds/BG-FIN.jpg');
+    -fx-background-size: cover;
+}
+
+.comboBox_style{
+    
+}
+.dashboard{
+    -fx-background-image: url('../Backgrounds/BG_FINAL.jpg');
+    -fx-background-size: cover;
+}
